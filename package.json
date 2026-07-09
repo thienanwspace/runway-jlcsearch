@@ -1,0 +1,13 @@
+{
+  "name": "runway-jlcsearch",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bun run server.ts",
+    "dev": "bun run server.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.19"
+  }
+}

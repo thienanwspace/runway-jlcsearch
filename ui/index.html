@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JLC Search — Runway</title>
+    <link rel="stylesheet" href="/ui/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <h1 id="appTitle">JLC Search — Runway</h1>
+          <div class="badge-upstream">
+            Fork wrapper · Powered by
+            <a id="upstreamLink" href="#" target="_blank" rel="noopener">tscircuit/jlcsearch</a>
+          </div>
+        </div>
+        <span class="badge-upstream">Runway RDS 1.0</span>
+      </header>
+
+      <div class="layout">
+        <nav class="nav">
+          <button type="button" class="active" data-panel="start">Start</button>
+          <button type="button" data-panel="config">Configuration</button>
+          <button type="button" data-panel="run">Run &amp; Results</button>
+          <button type="button" data-panel="data">Data</button>
+          <button type="button" data-panel="about">About</button>
+        </nav>
+
+        <main class="main">
+          <section id="panel-start" class="panel active">
+            <div class="card">
+              <h2>Search JLCPCB parts on your machine</h2>
+              <p>One-click install and run — no WSL required on Windows.</p>
+              <div class="preset-row">
+                <button type="button" data-preset="quick" class="selected">Quick start</button>
+                <button type="button" data-preset="full-local">Full database build</button>
+                <button type="button" data-preset="server-only">Server only</button>
+              </div>
+              <button type="button" class="btn-primary" id="btnRunQuick" onclick="document.getElementById('btnRun').click()">
+                ▶ Run with current settings
+              </button>
+            </div>
+            <div class="card status-grid" id="statusCard">
+              <div id="statusJlc">…</div>
+              <div id="statusDb">…</div>
+            </div>
+          </section>
+
+          <section id="panel-config" class="panel">
+            <div class="card">
+              <h2>Configuration</h2>
+              <div class="field">
+                <label>Database setup</label>
+                <div class="segmented" id="setupMode" data-value="skip">
+                  <button type="button" data-value="skip" class="active">Database ready</button>
+                  <button type="button" data-value="full">Build from scratch</button>
+                </div>
+              </div>
+              <div class="field">
+                <label for="port">Server port</label>
+                <input type="number" id="port" value="3065" min="1024" max="65535" />
+              </div>
+              <div class="field">
+                <label><input type="checkbox" id="openBrowser" checked /> Open browser automatically</label>
+              </div>
+              <details class="advanced">
+                <summary>Advanced</summary>
+                <div class="field">
+                  <label for="host">Host bind</label>
+                  <input type="text" id="host" value="127.0.0.1" />
+                </div>
+                <div class="field">
+                  <label for="dbPath">Database path</label>
+                  <p class="hint">Leave empty = ./db.sqlite3 in the jlcsearch directory</p>
+                  <input type="text" id="dbPath" placeholder="C:\path\to\db.sqlite3" />
+                </div>
+              </details>
+              <p style="margin-top:16px;font-size:12px;color:var(--text-secondary)">Command Preview</p>
+              <pre class="command-preview" id="commandPreview">…</pre>
+            </div>
+          </section>
+
+          <section id="panel-run" class="panel">
+            <div class="card">
+              <h2>Progress</h2>
+              <ul class="steps" id="steps">
+                <li data-step="bun"><span class="dot"></span> Check Bun</li>
+                <li data-step="setup"><span class="dot"></span> Build database</li>
+                <li data-step="server"><span class="dot"></span> Start server</li>
+              </ul>
+              <iframe id="embed" class="embed hidden" title="jlcsearch app"></iframe>
+            </div>
+          </section>
+
+          <section id="panel-data" class="panel">
+            <div class="card">
+              <h2>Database</h2>
+              <p id="dataDbPath">—</p>
+              <p class="hint">After a full build, the file lives in the jlcsearch directory.</p>
+            </div>
+          </section>
+
+          <section id="panel-about" class="panel">
+            <div class="card">
+              <h2>About</h2>
+              <p>
+                <strong>JLC Search Runway</strong> is an independent UI wrapper by
+                <a href="https://github.com/thienanwspace" style="color:var(--accent)">@thienanwspace</a>.
+                It is not an official tscircuit product.
+              </p>
+              <p>
+                Goal: run
+                <a href="https://github.com/tscircuit/jlcsearch" style="color:var(--accent)">jlcsearch</a>
+                locally on Windows without reading the full dev README.
+              </p>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <footer class="actionbar">
+        <button type="button" class="btn-primary" id="btnRun">Run</button>
+        <button type="button" class="btn-secondary" id="btnStop">Stop</button>
+      </footer>
+
+      <div class="console" id="console" aria-live="polite"></div>
+    </div>
+    <script src="/ui/app.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+{
+  "runway": "1.0",
+  "name": "jlcsearch-runway",
+  "displayName": "JLC Search — Runway",
+  "tagline": "Search JLCPCB parts locally — one click to install, one click to run",
+  "upstream": {
+    "repo": "tscircuit/jlcsearch",
+    "license": "MIT",
+    "homepage": "https://jlcsearch.tscircuit.com"
+  },
+  "accent": "#1A7F72",
+  "requirements": {
+    "bun": ">=1.2.0",
+    "diskGb": 5,
+    "ramMb": 2048
+  },
+  "entry": {
+    "oneClick": "scripts/runway-start.ps1",
+    "oneClickUnix": "scripts/runway-start.sh",
+    "ui": "ui/index.html",
+    "runner": "server.ts"
+  },
+  "presets": [
+    {
+      "id": "quick",
+      "label": "Quick start",
+      "description": "Use an existing database or skip the build — start the local server",
+      "config": {
+        "setupMode": "skip",
+        "serverMode": "origin",
+        "port": 3065,
+        "host": "127.0.0.1",
+        "openBrowser": true
+      }
+    },
+    {
+      "id": "full-local",
+      "label": "Full database build",
+      "description": "Download jlcparts cache → optimize → derived tables",
+      "config": {
+        "setupMode": "full",
+        "serverMode": "origin",
+        "port": 3065,
+        "host": "127.0.0.1",
+        "openBrowser": true
+      }
+    },
+    {
+      "id": "server-only",
+      "label": "Server only",
+      "description": "Assumes db.sqlite3 already exists in the jlcsearch directory",
+      "config": {
+        "setupMode": "skip",
+        "serverMode": "origin",
+        "port": 3065,
+        "host": "127.0.0.1",
+        "openBrowser": true
+      }
+    }
+  ],
+  "controls": [
+    {
+      "key": "setupMode",
+      "type": "segmented",
+      "label": "Database setup",
+      "default": "skip",
+      "options": [
+        { "value": "skip", "label": "Database ready" },
+        { "value": "full", "label": "Build from scratch" }
+      ]
+    },
+    {
+      "key": "port",
+      "type": "number",
+      "label": "Server port",
+      "default": 3065,
+      "min": 1024,
+      "max": 65535,
+      "env": "PORT"
+    },
+    {
+      "key": "host",
+      "type": "string",
+      "label": "Bind address",
+      "default": "127.0.0.1",
+      "env": "HOST",
+      "advanced": true
+    },
+    {
+      "key": "dbPath",
+      "type": "path",
+      "label": "Database path",
+      "default": "",
+      "env": "JLCSEARCH_DB_PATH",
+      "advanced": true
+    },
+    {
+      "key": "openBrowser",
+      "type": "boolean",
+      "label": "Open browser automatically",
+      "default": true
+    }
+  ]
+}
