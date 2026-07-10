@@ -25,7 +25,7 @@
   <rect x="260" y="200" width="240" height="40" rx="6" fill="#1a7f72"/>
   <text x="276" y="226" fill="#e8ecf4" font-family="Segoe UI, system-ui, sans-serif" font-size="14">▶ Run with current settings</text>
   <rect x="240" y="304" width="1000" height="80" rx="10" fill="#171b24" stroke="#2a3142"/>
-  <text x="260" y="336" fill="#22c55e" font-family="Segoe UI, system-ui, sans-serif" font-size="13">✓ jlcsearch: C:\dev\jlcsearch-pilot</text>
+  <text x="260" y="336" fill="#22c55e" font-family="Segoe UI, system-ui, sans-serif" font-size="13">✓ jlcsearch: ../jlcsearch-pilot</text>
   <text x="260" y="362" fill="#f59e0b" font-family="Segoe UI, system-ui, sans-serif" font-size="13">⚠ No db.sqlite3 — use Full database build or set JLCSEARCH_DB_PATH</text>
   <rect y="672" width="1280" height="48" fill="#171b24"/>
   <rect y="671" width="1280" height="1" fill="#2a3142"/>

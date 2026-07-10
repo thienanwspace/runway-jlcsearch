@@ -51,9 +51,11 @@ Open **http://127.0.0.1:3080/** → click **Run**.
 
 | Variable | Description |
 |----------|-------------|
-| `JLCSEARCH_ROOT` | Path to your jlcsearch clone |
+| `JLCSEARCH_ROOT` | **Primary.** Absolute path to your jlcsearch clone |
 | `JLCSEARCH_DB_PATH` | Path to `db.sqlite3` (optional) |
 | `RUNWAY_PORT` | Runway UI port (default `3080`) |
+
+If `JLCSEARCH_ROOT` is unset, Runway looks for a sibling folder (`../jlcsearch-pilot` or `../jlcsearch`) next to this repo.
 
 ## Presets
 
