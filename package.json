@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "start": "bun run server.ts",
-    "dev": "bun run server.ts"
+    "dev": "bun run server.ts",
+    "screenshots": "bun scripts/capture-screenshots.ts"
   },
   "devDependencies": {
-    "@types/bun": "^1.2.19"
+    "@types/bun": "^1.2.19",
+    "playwright": "^1.61.1"
   }
 }

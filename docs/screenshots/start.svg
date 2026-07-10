@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#0f1117"/>
+  <rect width="1280" height="48" fill="#171b24"/>
+  <rect y="47" width="1280" height="1" fill="#2a3142"/>
+  <text x="20" y="30" fill="#e8ecf4" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="600">JLC Search — Runway</text>
+  <text x="20" y="44" fill="#8b95a8" font-family="Segoe UI, system-ui, sans-serif" font-size="11">Fork wrapper · Powered by tscircuit/jlcsearch</text>
+  <text x="1180" y="30" fill="#8b95a8" font-family="Segoe UI, system-ui, sans-serif" font-size="11" text-anchor="end">Runway RDS 1.0</text>
+  <rect y="48" width="220" height="624" fill="#171b24"/>
+  <rect x="219" y="48" width="1" height="624" fill="#2a3142"/>
+  <rect x="12" y="64" width="196" height="32" rx="6" fill="#1a7f72"/>
+  <text x="24" y="85" fill="#e8ecf4" font-family="Segoe UI, system-ui, sans-serif" font-size="13">Start</text>
+  <text x="24" y="117" fill="#8b95a8" font-family="Segoe UI, system-ui, sans-serif" font-size="13">Configuration</text>
+  <text x="24" y="149" fill="#8b95a8" font-family="Segoe UI, system-ui, sans-serif" font-size="13">Run &amp; Results</text>
+  <text x="24" y="181" fill="#8b95a8" font-family="Segoe UI, system-ui, sans-serif" font-size="13">Data</text>
+  <text x="24" y="213" fill="#8b95a8" font-family="Segoe UI, system-ui, sans-serif" font-size="13">About</text>
+  <rect x="240" y="68" width="1000" height="220" rx="10" fill="#171b24" stroke="#2a3142"/>
+  <text x="260" y="104" fill="#e8ecf4" font-family="Segoe UI, system-ui, sans-serif" font-size="20" font-weight="600">Search JLCPCB parts on your machine</text>
+  <text x="260" y="132" fill="#8b95a8" font-family="Segoe UI, system-ui, sans-serif" font-size="14">One-click install and run — no WSL required on Windows.</text>
+  <rect x="260" y="152" width="110" height="34" rx="6" fill="#1a7f72"/>
+  <rect x="378" y="152" width="150" height="34" rx="6" fill="#1e2430" stroke="#2a3142"/>
+  <rect x="536" y="152" width="100" height="34" rx="6" fill="#1e2430" stroke="#2a3142"/>
+  <text x="276" y="174" fill="#e8ecf4" font-family="Segoe UI, system-ui, sans-serif" font-size="13">Quick start</text>
+  <text x="394" y="174" fill="#8b95a8" font-family="Segoe UI, system-ui, sans-serif" font-size="13">Full database build</text>
+  <text x="552" y="174" fill="#8b95a8" font-family="Segoe UI, system-ui, sans-serif" font-size="13">Server only</text>
+  <rect x="260" y="200" width="240" height="40" rx="6" fill="#1a7f72"/>
+  <text x="276" y="226" fill="#e8ecf4" font-family="Segoe UI, system-ui, sans-serif" font-size="14">▶ Run with current settings</text>
+  <rect x="240" y="304" width="1000" height="80" rx="10" fill="#171b24" stroke="#2a3142"/>
+  <text x="260" y="336" fill="#22c55e" font-family="Segoe UI, system-ui, sans-serif" font-size="13">✓ jlcsearch: C:\dev\jlcsearch-pilot</text>
+  <text x="260" y="362" fill="#f59e0b" font-family="Segoe UI, system-ui, sans-serif" font-size="13">⚠ No db.sqlite3 — use Full database build or set JLCSEARCH_DB_PATH</text>
+  <rect y="672" width="1280" height="48" fill="#171b24"/>
+  <rect y="671" width="1280" height="1" fill="#2a3142"/>
+  <rect x="240" y="684" width="72" height="32" rx="6" fill="#1a7f72"/>
+  <rect x="322" y="684" width="72" height="32" rx="6" fill="#1e2430" stroke="#2a3142"/>
+  <text x="258" y="705" fill="#e8ecf4" font-family="Segoe UI, system-ui, sans-serif" font-size="13">Run</text>
+  <text x="340" y="705" fill="#8b95a8" font-family="Segoe UI, system-ui, sans-serif" font-size="13">Stop</text>
+</svg>
